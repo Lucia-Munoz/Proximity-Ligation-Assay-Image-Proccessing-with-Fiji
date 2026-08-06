@@ -1,0 +1,1 @@
+run("Analyze Particles...", "clear summarize composite");
