@@ -6,3 +6,9 @@ Shown below is the workflow for the PLA Image analysis as developed by Sara (sar
 <img width="2685" height="1687" alt="Diagrama en blanco" src="https://github.com/user-attachments/assets/13b91315-b5c8-4452-88cd-f215b54b76ee" />
 
 Inside this repository you can find a folder corresponding to each channel and the macros used. Inside each of the macros there is a title and an introduction which explains the usage, results and application of said macro
+
+# First step Max Projection and Split Channels:
+
+The raw confocal microscopy images are z-stacks containing different channels. Here we execute the macro MaxProjection_SplitChannels.ijm found inside the *Analysis* folder in this repository. This macro 
+
+It is important to first process the cytosol, in these experiments the NHS esther was used to dye all the proteins in the cells (mouse fibroblasts) and therefore the cell cytosol can be delimitated as there is an instensity difference between the cell and the background. It is important that the cytosol is the first channel proccessed as it will be used to delimite the individual cells. 
