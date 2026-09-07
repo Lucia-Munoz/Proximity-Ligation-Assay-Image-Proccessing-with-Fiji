@@ -13,11 +13,6 @@
 //   (Rename_MitosThresholded.ijm) sobre las carpetas "citosol per cell 8bit"
 //   y "mitos thresholded", con DRY_RUN=true primero para verificar.
 //
-// Cambio respecto al Recorder: en vez de doWand(x,y) con una coordenada fija
-// (que solo sirve para la imagen concreta donde se grabo), se usa
-// setThreshold + "Create Selection" sobre la mascara de citosol, que
-// selecciona automaticamente toda el area no-fondo, sea cual sea su forma
-// o posicion.
 //
 // Uso:
 //   1. Ejecuta la macro.
@@ -121,7 +116,7 @@ for (i = 0; i < lengthOf(citosolList); i++) {
     run("Clear Outside");
 
     saveAs("Tiff", outputDir + dupTitle + ".tif");
-    close(); // cierra el duplicado ya guardado
+    close(); 
 
     selectWindow(mitosTitle);
     close();
