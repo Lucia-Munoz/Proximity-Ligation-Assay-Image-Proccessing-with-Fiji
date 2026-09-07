@@ -1,4 +1,4 @@
-// SubtractBackground_Batch.ijm
+// SubtractBackground_Mitos.ijm
 //
 // Para cada imagen de la carpeta de entrada:
 //   1) Aplica Subtract Background (rolling=rollingRadius).
