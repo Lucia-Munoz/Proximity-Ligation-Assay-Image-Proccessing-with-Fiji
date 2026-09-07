@@ -9,8 +9,8 @@
 //
 // Uso:
 //   1. Abre todas las imagenes/stacks que quieras procesar.
-//   2. Ejecuta esta macro (Plugins > Macros > Run..., o pegala en el editor de macros y dale a Run).
-//   3. Elige la carpeta de salida cuando se te pida.
+//   2. Ejecuta esta macro.
+//   3. Elige la carpeta de salida.
 
 // Parametros de Find Maxima
 prominence = 10;
