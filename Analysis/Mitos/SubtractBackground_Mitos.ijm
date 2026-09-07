@@ -9,7 +9,7 @@
 //   2. Elige la carpeta con las imagenes a procesar.
 //   3. Elige (o crea) la carpeta de salida.
 
-// ---- Parametros (cambia aqui si necesitas otro valor) ----
+// ---- Parametros ----
 rollingRadius = 20;
 
 inputDir = getDirectory("Elige la carpeta con las imagenes a procesar");
