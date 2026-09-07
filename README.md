@@ -3,7 +3,7 @@ This repository contains the Fiji Macros used for the Proximity LIgation Assay I
 
 Shown below is the workflow for the PLA Image analysis as developed by Sara, each channel is shown in a different colour and the names over the arrows correspond to the macro used on each step. Please, note that other softwares are also used in this pipeline which code is not available right now. These codes are marked in pink. 
 
-<img width="5709" height="3163" alt="Diagrama en blanco" src="https://github.com/user-attachments/assets/58bc6633-231b-424c-99b7-0ae0744baf28" />
+<img width="5709" height="3163" alt="Diagrama en blanco" src="https://github.com/user-attachments/assets/98a28bd6-b271-48a3-8a58-dd25eb9412f2" />
 
 Inside this repository you can find a folder corresponding to each channel and the macros used. Inside each of the macros there is a title and an introduction which explains the usage, results and application of said macro
 
