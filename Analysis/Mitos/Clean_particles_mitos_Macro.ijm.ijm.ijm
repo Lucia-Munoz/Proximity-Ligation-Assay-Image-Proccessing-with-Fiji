@@ -1,4 +1,4 @@
-// RemoveSmallParticles.ijm
+// Clean_Particles_mitos_Macro.ijm
 //
 // Flujo:
 //   1) Detecta particulas muy pequenas (tamano 0-0.1, en las unidades
