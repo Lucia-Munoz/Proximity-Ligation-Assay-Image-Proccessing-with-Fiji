@@ -1,8 +1,7 @@
 // MaxProjection_then_FindMaxima.ijm
 //
 // Flujo:
-//   1) Para cada imagen actualmente abierta: proyeccion de maxima intensidad (Z Project)
-//      y guardado como TIFF en la carpeta elegida.
+//   1) Para cada imagen actualmente abierta: proyeccion de maxima intensidad (Z Project) y guardado como TIFF en la carpeta elegida.
 //   2) Cierre de TODAS las imagenes originales.
 //   3) Reapertura de cada proyeccion guardada.
 //   4) Find Maxima sobre cada proyeccion, guardando el resultado en una
