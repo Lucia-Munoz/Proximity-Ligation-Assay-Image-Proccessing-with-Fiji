@@ -1,8 +1,7 @@
 // MaxProjection_then_SplitChannels.ijm
 //
 // Flujo:
-//   1) Para cada imagen actualmente abierta: proyeccion de maxima intensidad (Z Project)
-//      y guardado como TIFF en la carpeta elegida.
+//   1) Para cada imagen ABIERTA: proyeccion de maxima intensidad (Z Project) y guardado como TIFF en la carpeta elegida.
 //   2) Cierre de TODAS las imagenes originales.
 //   3) Reapertura de cada proyeccion guardada.
 //   4) Separacion de canales (Split Channels) sobre cada proyeccion, guardando
@@ -32,10 +31,9 @@ for (i = 0; i < n; i++) {
     titles[i] = getTitle();
 }
 
-setBatchMode(true); // acelera el proceso y evita el parpadeo de ventanas
+setBatchMode(true);
 
-// Aqui guardaremos las rutas completas de cada proyeccion guardada,
-// para poder reabrirlas en el paso 3 sin volver a preguntar por la carpeta.
+// Aqui guardaremos las rutas completas de cada proyeccion guardada, para poder reabrirlas en el paso 3 sin volver a preguntar por la carpeta.
 projFiles = newArray(titles.length);
 
 // Paso 1: max projection de cada imagen abierta
