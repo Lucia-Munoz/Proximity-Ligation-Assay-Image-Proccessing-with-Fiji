@@ -23,7 +23,7 @@
 //   Cuando confirmes que la regla es correcta, cambia DRY_RUN a false y
 //   vuelve a ejecutar para renombrar de verdad.
 
-DRY_RUN = false; // cambia a false para renombrar de verdad
+DRY_RUN = true; // cambia a false para renombrar de verdad
 
 dir = getDirectory("Elige la carpeta con los archivos 'thresholded' a renombrar");
 fileList = getFileList(dir);
