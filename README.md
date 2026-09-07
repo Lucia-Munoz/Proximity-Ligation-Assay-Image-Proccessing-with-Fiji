@@ -1,9 +1,9 @@
 # Proximity-Ligation-Assay-Image-Proccessing-with-Fiji
-This repository contains the Fiji Macros used for the Proximity LIgation Assay Image proccessing for the detection of mitochondrial supercomplexes, developed by Lucia Muñoz Blanco and Sara Natalia Jaroszewicz at Dr Jose Antonio Enríquez laboratory (Genoxphos) in Centro Nacional de Investigaciones Cardiovasculares (CNIC))
+This repository contains the Fiji Macros used for the Proximity LIgation Assay Image proccessing for the detection of mitochondrial supercomplexes, developed by Lucia Muñoz Blanco (lmunozb08@gmail.com) and Sara Natalia Jaroszewicz (saranatalia.jaroszewicz@cnic.es) at Dr Jose Antonio Enríquez laboratory (Genoxphos) in Centro Nacional de Investigaciones Cardiovasculares (CNIC))
 
-Shown below is the workflow for the PLA Image analysis as developed by Sara (saranatalia.jaroszewicz@cnic.es), each channel is shown in a different colour and the names over the arrows correspond to the macro used on each step. Please, note that other softwares are also used in this pipeline which code is not available right now. These codes are marked in pink. 
+Shown below is the workflow for the PLA Image analysis as developed by Sara, each channel is shown in a different colour and the names over the arrows correspond to the macro used on each step. Please, note that other softwares are also used in this pipeline which code is not available right now. These codes are marked in pink. 
 
-<img width="3045" height="1687" alt="Diagrama en blanco" src="https://github.com/user-attachments/assets/aff386ca-e607-4ec1-8e93-f7e35f77ca9b" />
+<img width="5709" height="3163" alt="Diagrama en blanco" src="https://github.com/user-attachments/assets/58bc6633-231b-424c-99b7-0ae0744baf28" />
 
 Inside this repository you can find a folder corresponding to each channel and the macros used. Inside each of the macros there is a title and an introduction which explains the usage, results and application of said macro
 
