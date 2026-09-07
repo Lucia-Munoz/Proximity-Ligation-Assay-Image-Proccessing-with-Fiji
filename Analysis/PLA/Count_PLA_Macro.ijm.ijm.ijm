@@ -1,4 +1,4 @@
-// AnalyzeParticles_Summarize.ijm
+// Count_PLA_Macro.ijm
 //
 // Flujo:
 //   1) Detecta todas las particulas de la imagen abierta con Analyze Particles.
