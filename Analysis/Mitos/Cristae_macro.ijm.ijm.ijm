@@ -1,4 +1,4 @@
-// CristaePeakDistanceAnalyzer.ijm
+// Cristae_macro.ijm
 //
 // Flujo:
 //   1) Toma el perfil de intensidad a lo largo de una linea dibujada manualmente sobre la mitocondria.
