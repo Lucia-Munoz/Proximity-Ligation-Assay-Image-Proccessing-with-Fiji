@@ -5,13 +5,12 @@
 // esta macro:
 //   1) Recorre la imagen pixel a pixel.
 //   2) Cada vez que encuentra un pixel de un color no visitado y distinto
-//      del fondo, usa doWand() en ese punto (igual que si hicieras click
-//      con la varita magica) para seleccionar automaticamente esa celula.
+//      del fondo, usa doWand() en ese punto (es similar a cuando usábamos DoWand al hacerlo a mano) para seleccionar automaticamente esa celula.
 //   3) Duplica la imagen original completa, aisla esa celula (borra el
 //      resto a negro) y la guarda como TIFF.
 //   4) Marca esos pixeles como "visitados" para no procesar la misma
 //      celula dos veces.
-// Este proceso se repite para todas las imagenes que tengas abiertas.
+// Este proceso se repite para todas las imagenes ABIERTAS.
 //
 // Esto reemplaza el proceso manual de usar la varita en cada celula:
 // aqui se detectan y aislan todas las celulas automaticamente, en todas
@@ -20,24 +19,20 @@
 // IMPORTANTE:
 //   - Esta version es para imagenes RGB reales (bitDepth 24), donde cada
 //     celula es un bloque de pixeles de color solido y uniforme.
-//   - Se asume que el fondo es un color solido (por defecto negro
-//     puro, 0,0,0). Si tu fondo es otro color, cambia bgR/bgG/bgB abajo.
-//   - Al ser un recorrido pixel a pixel, en imagenes muy grandes puede
-//     tardar bastante (varios segundos a un par de minutos POR imagen).
+//   - Se asume que el fondo es negro puro: 0,0,0. Si tu fondo es otro color, cambia bgR/bgG/bgB abajo.
+//   - Al ser un recorrido pixel a pixel, en imagenes muy grandes puede tardar bastante.
 //
 // Uso:
 //   1. Abre todas las imagenes RGB label que quieras procesar.
 //   2. Ejecuta esta macro.
-//   3. Elige la carpeta de salida cuando se te pida (una unica vez,
-//      valida para todas las imagenes).
+//   3. Elige la carpeta de salida.
 
 // ---- Parametros ----
 bgR = 0; bgG = 0; bgB = 0; // color de fondo a ignorar (por defecto negro)
 minMeanToSave = 0.5;       // si la imagen aislada tiene un brillo medio por
                             // debajo de esto, se considera "solo negra"
                             // (ruido/artefacto) y no se guarda
-minAreaPixels = 20;        // regiones mas pequenas que esto (en pixeles) se
-                            // ignoran directamente (ruido/artefactos de borde)
+minAreaPixels = 20;        // regiones mas pequenas que esto (en pixeles) se ignoran 
 
 // ---- Paso 0: comprobaciones iniciales ----
 nImgs = nImages;
@@ -46,8 +41,7 @@ if (nImgs == 0) {
     exit();
 }
 
-// Capturamos los titulos de todas las imagenes abiertas ANTES de tocar nada,
-// porque los indices de ventana cambian al crear/cerrar imagenes auxiliares.
+// Capturamos los titulos de todas las imagenes abiertas, porque los indices de ventana cambian al crear/cerrar imagenes auxiliares.
 titles = newArray(nImgs);
 for (i = 0; i < nImgs; i++) {
     selectImage(i + 1); // selectImage es 1-based
@@ -117,10 +111,8 @@ for (imgIndex = 0; imgIndex < titles.length; imgIndex++) {
                 colorVal = getPixel(x, y);
 
                 if (colorVal != bgPacked) {
-                    // Seleccionamos automaticamente toda la celula de este color,
-                    // igual que un click manual con la varita magica en (x, y).
-                    // IMPORTANTE: especificamos tolerance=0 y "8-connected" de forma
-                    // explicita. Si se llama a doWand(x,y) sin estos parametros,
+                    // Seleccionamos automaticamente toda la celula de este color, igual que hacíamos a mano con el doWand.
+                    // IMPORTANTE: especificamos tolerance=0 y "8-connected" de forma explicita. Si se llama a doWand(x,y) sin estos parametros,
                     // ImageJ usa la tolerancia configurada en Edit > Options > Wand
                     // Tool, que puede no ser 0 y fusionar celulas de distinto color/
                     // nivel de gris en una sola seleccion.
@@ -128,8 +120,7 @@ for (imgIndex = 0; imgIndex < titles.length; imgIndex++) {
                     roiManager("add");
                     idx = roiManager("count") - 1;
 
-                    // Marcamos esos pixeles como visitados (esto se hace SIEMPRE,
-                    // sea o no ruido, para no volver a escanear esta region)
+                    // Marcamos esos pixeles como visitados (esto se hace SIEMPRE, sea o no ruido, para no volver a escanear esta region)
                     selectWindow(visitedTitle);
                     roiManager("select", idx);
                     setColor(255);
