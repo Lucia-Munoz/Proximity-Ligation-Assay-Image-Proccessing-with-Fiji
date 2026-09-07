@@ -1,7 +1,6 @@
 // Rename_MaximaFiles.ijm
 //
-// Renombra los archivos de la carpeta "find maxima" al mismo formato que
-// los archivos "thresholded" ya renombrados, para poder emparejarlos por
+// Renombra los archivos de la carpeta "find maxima" al mismo formato que los archivos "thresholded" ya renombrados, para poder emparejarlos por
 // identificador comun. Ejemplo:
 //
 //   "MAX_DM_DMEM_NDUFV2_NDUFB8_001_decon_Ch0.ics.tif Maxima.tif"
@@ -22,7 +21,7 @@
 //   Cuando confirmes que la regla es correcta, cambia DRY_RUN a false y
 //   vuelve a ejecutar para renombrar de verdad.
 
-DRY_RUN = false; // cambia a false para renombrar de verdad
+DRY_RUN = true; // cambia a false para renombrar de verdad
 
 PREFIX = "C1_MAX_";
 startMarker = "MAX_";
