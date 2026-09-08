@@ -28,7 +28,9 @@ We start with the RGB images that we obtained in the previous step, then in this
 
 As in this experiment we are quantifiying the amount of supercomplexes (PLA) inside the mitochondria, we must only quantify the signal inside mitochondrias, and to do that we first have to delimit this organelle. All the macros mentioned here can be found inside the *mitos* folder in the repository.
 
-We start with the RGB images that we obtained from the first step, then se substrack the background using the macro SubstrackBackground_Mito.ijm. After this we threshold the mitos using the Fiji Plugin MitoAnalyzer with the following params: (FALTA)
+We start with the RGB images that we obtained from the first step, then se substrack the background using the macro SubstrackBackground_Mito.ijm. After this we threshold the mitos using the Fiji Plugin MitoAnalyzer with the following params:
+
+<img width="726" height="432" alt="WhatsApp Image 2026-09-08 at 08 59 27" src="https://github.com/user-attachments/assets/a425a701-60ec-4882-b94e-10c30f5bca4e" />
 
 Now we clean the mitos that are too small, and possibly unspecific signal, using the macro Clean_Particles_Mitos.ijm all the particles smaller than 0'1 nm2 are removed, these macro is executed over all the open images.
 
